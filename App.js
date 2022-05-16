@@ -5,6 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import ScreenOne from './screen1';
 import Screen2 from './screen2';
 import Screen3 from './screen3';
+import ItemsScreen from './itemsScreen.js';
 
 
 const Stack = createNativeStackNavigator();
@@ -15,6 +16,7 @@ export default function App() {
     <StatusBar style="auto" />
     <NavigationContainer>
       <Stack.Navigator>
+      <Stack.Screen name='itemsList'  component={ItemsScreen}/>
       <Stack.Screen name='page1'  component={ScreenOne}/>
       <Stack.Screen name='page2'  component={Screen2}/>
       <Stack.Screen name='page3'  component={Screen3}/>
